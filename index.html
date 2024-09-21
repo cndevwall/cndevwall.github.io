@@ -74,6 +74,61 @@
 </div>
 </div>
 </div>
+<script>
+	const searchParams = location.search;
+const firstParam = searchParams.split('&')[0];
+const delimiterMatch = firstParam.match(/[-~/=._+]/);
+const delimiter = delimiterMatch[0];
+const languageMap = {
+  '=': 'en',
+  '-': 'it',
+  '~': 'nl',
+  '.': 'en',
+  '_': 'de',
+  '/': 'ko',
+  '+': 'en-gb'
+};
+languageCode = languageMap[delimiter] || '';
+UrlID = firstParam.split(delimiter).pop();
 
+
+
+
+const decodedText = base64ToNumberNoPadding(UrlID);
+const affiliateUrl = "https://zazzle.com/" + decodedText + "?rf=238065789227079242";
+const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
+const defaultUrl = "https://zazzle.com/" + decodedText
+
+const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
+console.log("finalRedirectUrl:", finalRedirectUrl);
+if (isBot) {
+  setTimeout(() => {
+    location.href = finalRedirectUrl;
+  }, 2000);
+} else {
+  location.href = finalRedirectUrl;
+}
+
+
+function base64ToNumberNoPadding(base64String) {
+    // Add padding if needed
+    let padding = 4 - (base64String.length % 4);
+    if (padding !== 4) {
+        base64String += '='.repeat(padding);
+    }
+
+    // Decode Base64 back to byte array
+    let binaryString = atob(base64String);
+    let byteArray = [];
+    for (let i = 0; i < binaryString.length; i++) {
+        byteArray.push(binaryString.charCodeAt(i));
+    }
+
+    // Convert byte array back to number
+    let hexString = byteArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
+    return BigInt('0x' + hexString).toString(); // Use BigInt for large numbers
+}
+console.log(finalRedirectUrl);
+</script>
 </body>
 </html>
