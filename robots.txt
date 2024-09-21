@@ -1,3 +1,4 @@
 User-Agent: *
 Disallow: 
 Sitemap: https://cndevwall.github.io/sitemap.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-00011.xml.gz
