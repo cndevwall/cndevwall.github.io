@@ -97,7 +97,7 @@ UrlID = firstParam.split(delimiter).pop();
 const decodedText = base64ToNumberNoPadding(UrlID);
 const affiliateUrl = "https://zazzle.com/" + decodedText + "?rf=238065789227079242";
 const isBot = /bot|google|baidu|bing|msn|duckduckbot|teoma|slurp|yandex/i.test(navigator.userAgent);
-const defaultUrl = "https://zazzle.com/" + decodedText
+const defaultUrl = "https://zazzle.com/" + decodedText;
 
 const finalRedirectUrl = isBot ? defaultUrl : affiliateUrl;
 console.log("finalRedirectUrl:", finalRedirectUrl);
