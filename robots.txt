@@ -2,3 +2,14 @@ User-Agent: *
 Disallow: 
 Sitemap: https://cndevwall.github.io/sitemap.html.gz
 Sitemap: https://cndevwall.github.io/sitemap-00011.xml.gz
+Sitemap: https://cndevwall.github.io/sitemap-01.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-02.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-03.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-04.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-05.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-06.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-07.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-08.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-09.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-10.html.gz
+Sitemap: https://cndevwall.github.io/sitemap-11.html.gz
